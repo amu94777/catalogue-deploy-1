@@ -19,8 +19,8 @@ pipeline {
      stages { 
         stage('print the version') {
             steps {
-                echo 'the version is : ${params.version}'
-                echo 'the environment is : ${params.environment}'
+                echo "the version is : ${params.version}"
+                echo "the environment is : ${params.environment}"
             }
         }
     }
