@@ -43,14 +43,16 @@ pipeline {
                 """
             }
         }
-        stage('version') {
+        stage('apply') {
             steps {
                 sh """
-                   echo "the app version is :${params.version}"
+                   cd terraform
+                   terraform apply -var-file=${params.environment}/${params.environment}.tfvars -var="app_version=${params.version}" -auto-approve
                 
                 """
             }
         }
+        
 
     }
 
