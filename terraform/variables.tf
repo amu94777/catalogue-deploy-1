@@ -23,6 +23,6 @@ variable "zone_name" {
   default = "jaya123.shop"
 }
 variable app_version {
-  default = "1.0.0"
+  
   
 }
