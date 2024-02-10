@@ -22,6 +22,6 @@ variable "environment" {
 variable "zone_name" {
   default = "jaya123.shop"
 }
-variable app_version {
+variable "app_version" {
   
 }
