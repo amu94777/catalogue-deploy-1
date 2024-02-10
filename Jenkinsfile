@@ -43,10 +43,10 @@ pipeline {
                 """
             }
         }
-        stage('print the version') {
+        stage('version') {
             steps {
                 sh """
-                   echo "the app version is : $packageVersion"
+                   echo "the app version is :$packageVersion"
                 
                 """
             }
