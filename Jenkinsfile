@@ -13,7 +13,7 @@ pipeline {
     //     nexusURL = '172.31.13.69:8081'
     //  }
      parameters {
-        string(name: 'version', defaultValue: '1.0.0', description: 'What is the version?')
+        string(name: 'version', defaultValue: '', description: 'What is the version?')
         string(name: 'environment', defaultValue: 'dev', description: 'What is the environment?')
      }
      stages { 
