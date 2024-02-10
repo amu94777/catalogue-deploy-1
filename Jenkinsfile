@@ -46,7 +46,7 @@ pipeline {
         stage('version') {
             steps {
                 sh """
-                   echo "the app version is :${packageVersion}"
+                   echo "the app version is :${params.version}"
                 
                 """
             }
