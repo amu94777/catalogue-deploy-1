@@ -25,25 +25,25 @@ pipeline {
                 """
             }
         }
-        stage('Init') {
-            steps {
-                sh """
-                   cd terraform
-                   terraform init --backend-config=${params.environment}/backend.tf -reconfigure
+        // stage('Init') {
+        //     steps {
+        //         sh """
+        //            cd terraform
+        //            terraform init --backend-config=${params.environment}/backend.tf -reconfigure
                 
-                """
-            }
-        }
-         stage('plan') {
-            steps {
-                sh """
-                   cd terraform
-                   terraform plan -var-file=${params.environment}/${params.environment}.tfvars 
-                   -var="app_version=${params.version}"
+        //         """
+        //     }
+        // }
+        //  stage('plan') {
+        //     steps {
+        //         sh """
+        //            cd terraform
+        //            terraform plan -var-file=${params.environment}/${params.environment}.tfvars 
+        //            -var="app_version=${params.version}"
                 
-                """
-            }
-        }
+        //         """
+        //     }
+        // }
 
     }
 
